@@ -46,8 +46,8 @@ const StyledImageBlock = styled.div`
 const UploadForm = (props) => {
   const { history } = props;
 
-  const [img, setImg] = useState(null);
-  const [uploadedImg, setUploadedImg] = useState(exampleImage);
+  const [img, setImg] = useState(exampleImage);
+  const [uploadedImg, setUploadedImg] = useState(null);
   const [isUploaded, setIsUploaded] = useState(false);
 
   /* 파일 업로드 함수 */
