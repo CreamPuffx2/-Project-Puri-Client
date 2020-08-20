@@ -2,9 +2,7 @@ import React from 'react';
 import AuthTemplate from '../components/auth/AuthTemplate';
 import AuthForm from '../components/auth/AuthForm';
 
-const LoginPage = (props) => {
-  const { history } = props;
-
+const LoginPage = ({ history }) => {
   return (
     <AuthTemplate>
       <AuthForm history={history} />

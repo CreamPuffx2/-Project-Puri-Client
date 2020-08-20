@@ -4,9 +4,7 @@ import Header from '../components/header/Header';
 import ResultTemplate from '../components/result/ResultTemplate';
 import ResultForm from '../components/result/ResultForm';
 
-const ResultPage = (props) => {
-  const { history } = props;
-
+const ResultPage = ({ history }) => {
   return (
     <>
       <ResultTemplate>

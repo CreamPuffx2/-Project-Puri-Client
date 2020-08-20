@@ -14,6 +14,14 @@ const StyledHeader = styled.div`
   font-weight: bold;
   letter-spacing: 0.4rem;
   text-align: center;
+
+  :after {
+    content: '';
+    display: block;
+    width: 80px;
+    border-bottom: 2px solid red;
+    margin: 15px auto;
+  }
 `;
 
 const StyledUnderLine = styled.div`
@@ -86,7 +94,6 @@ const UploadForm = (props) => {
   return (
     <>
       <StyledHeader>풀이 등록</StyledHeader>
-      <StyledUnderLine />
       <StyledParagraph>틀린 풀이를 사진을 찍어 업로드해보세요!</StyledParagraph>
       <StyledImageBlock>
         <img

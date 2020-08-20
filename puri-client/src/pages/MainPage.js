@@ -4,9 +4,7 @@ import Header from '../components/header/Header';
 import MainTemplate from '../components/main/MainTemplate';
 import UploadForm from '../components/main/UploadForm';
 
-const MainPage = (props) => {
-  const { history } = props;
-
+const MainPage = ({ history }) => {
   return (
     <>
       <MainTemplate>

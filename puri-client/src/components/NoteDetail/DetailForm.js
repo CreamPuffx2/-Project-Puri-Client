@@ -55,7 +55,7 @@ const ResultImageBlock = styled.div`
   color: ${palette.gray[6]};
 `;
 
-const ResultForm = ({ history }) => {
+const DetailForm = ({ history }) => {
   const [tags, setTags] = useState('');
   const [comment, setComment] = useState('');
   const [img, getImg] = useState('');
@@ -109,6 +109,27 @@ const ResultForm = ({ history }) => {
     await history.push('/notes');
   };
 
+  const dataUrl = 'http://localhost:3004/note';
+  const [data, getData] = useState('');
+
+  useEffect(() => {
+    axios
+      .get(dataUrl, {
+        headers: {
+          Authorization: 'snaag', //google id로 구분
+          // note_id: location.state.result.id,
+        },
+      })
+      .then((res) => {
+        getData(res.data);
+        setTags(
+          res.data.tags.map((x) => {
+            return `#${x.tagname}`;
+          }),
+        );
+      });
+  }, []);
+
   return (
     <>
       <StyledHeader>Puri Check!</StyledHeader>
@@ -140,4 +161,4 @@ const ResultForm = ({ history }) => {
   );
 };
 
-export default ResultForm;
+export default DetailForm;

@@ -1,12 +1,10 @@
 import React from 'react';
 
 import Header from '../components/header/Header';
-import NotesTemplate from '../components/notes/NotesTemplate';
-import NotesForm from '../components/notes/NotesForm';
+import NotesTemplate from '../components/ReviewNote/NotesTemplate';
+import NotesForm from '../components/ReviewNote/NotesForm';
 
-const NotesPage = (props) => {
-  const { history } = props;
-
+const NotesPage = ({ history }) => {
   return (
     <>
       <NotesTemplate>
